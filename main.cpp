@@ -4,7 +4,6 @@
 
 using namespace std;
 
-// Ignorar a primeira linha
 int main (int argc, char** argv){
     tree *T;
     T = create_node(50);
