@@ -6,29 +6,24 @@ using namespace std;
 
 // Ignorar a primeira linha
 int main (int argc, char** argv){
+    tree *T;
+    T = create_node(50);
 
-    int soma;
-    // As próximas coisas eu fiz pra testar
-    t_list l, b, c;
+    addToTree(30, T);
+    addToTree(70, T);
+    addToTree(20, T);
+    addToTree(40, T);
+    addToTree(60, T);
+    addToTree(80, T);
 
-    l.number = 8;
-    l.next = &b;
+    /*  
+              50 
+           /     \ 
+          30      70 
+         /  \    /  \ 
+       20   40  60   80 */
 
-    b.number = 15;
-    b.next = &c;
-
-    c.number = 1;
-    c.next = nullptr;
-
-    // A partir daqui é a resolução, considerando que existe uma função
-    // Para criar a lista
-
-    printList(&l);
-
-    cout << "--------------------" << endl;
-
-    soma = sumList(&l);
-    cout << "Soma total: " << soma << endl;
-
+    printTree(*T);
+    cout << endl;
     return 0;
 }
